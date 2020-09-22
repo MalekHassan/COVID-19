@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="/all">all countries</a>
+    </header>
+    <main>
+        <div class="container column">
+                   <div> TotalConfirmed : <%=data.TotalConfirmed%></div>
+                   <div> TotalDeaths : <%=data.TotalDeaths%></div>
+                   <div>TotalRecovered : <%=data.TotalRecovered%></div>           
+                   <div class="contanire-data row">
+                       <form action="/countyResult">
+                           <input type="text" name="country" id="country">
+                           <input type="date" name="from" id="from">
+                           <input type="date" name="to" id="to">
+                           <input type="submit" value="submit">
+                       </form>
+                   </div>
+                </div>
+        
+    </main>
+</body>
+</html>

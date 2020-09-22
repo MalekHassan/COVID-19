@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="/all">all countries</a>
+    </header>
+    <main>
+        <div class="container column">
+            <% data.forEach(item=>{%>
+                <div> Country : <%=item.Country%></div>
+                   <div> TotalConfirmed : <%=item.TotalConfirmed%></div>
+                   <div> TotalDeaths : <%=item.TotalDeaths%></div>
+                   <div>TotalRecovered : <%=item.TotalRecovered%></div>      
+                   <div>Date : <%=item.Date%></div>           
+                   <div class="contanire-data row">
+                       <form action="/saveDB" method="POST">
+                        <input hidden type="text" name="Country" id="country" value="<%=item.Country%>">
+                           <input hidden type="text" name="TotalConfirmed" id="TotalConfirmed" value="<%=item.TotalConfirmed%>">
+                           <input hidden type="text" name="TotalDeaths" id="TotalDeaths" value=" <%=item.TotalDeaths%>">
+                           <input hidden type="text" name="TotalConfirmed" id="TotalConfirmed" value="<%=item.TotalRecovered%>">
+                           <input hidden type="text" name="Date" id="Date" value="<%=item.Date%>">
+                           <input  type="submit" value="add to my redords">
+                       </form>
+                   </div>
+                   <%}) %>
+                </div>
+        
+    </main>
+</body>
+</html>
